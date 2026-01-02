@@ -407,7 +407,7 @@
         // Load vocabulary from CSV file
         async function loadVocabulary() {
             try {
-                const response = await fetch('vocabulary.csv');
+                const response = await fetch('vocabulary-keim-nane.csv');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -449,7 +449,7 @@
                 document.getElementById('flashcardArea').innerHTML = `
                     <div class="empty-state">
                         <h2>Error Loading Vocabulary</h2>
-                        <p>Could not load vocabulary.csv: ${error.message}</p>
+                        <p>Could not load vocabulary-keim-nane.csv: ${error.message}</p>
                         <p>Make sure the file is in the same directory as this HTML file and you're viewing the page through a web server (not file://).</p>
                     </div>
                 `;
