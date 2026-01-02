@@ -1,2 +1,4 @@
 # gaelg
-Materials for my Manx Language classes. 
+Materials for Lauren Collister's Manx Language courses.  
+
+[Keim Nane Flashcards](/keim-nane-flashcards.html) 
