@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loayr Gaelg - Flashcards</title>
+    <title>Loayr Gaelg - Keim Nane</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Karla:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -99,6 +99,17 @@
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
+        }
+
+        .checkbox-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+        }
+
+        .checkbox-list .checkbox-group {
+            margin-top: 0;
         }
 
         label {
@@ -294,6 +305,26 @@
             margin-bottom: 1rem;
         }
 
+        footer {
+            background: var(--slate);
+            color: var(--cream);
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--rust);
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -322,10 +353,10 @@
     <div class="container">
         <div class="controls">
             <div class="control-group">
-                <label for="lessonSelect">Filter by Lessoon</label>
-                <select id="lessonSelect">
-                    <option value="all">All Lessons</option>
-                </select>
+                <label>Select Lessoon(yn)</label>
+                <div class="checkbox-list" id="lessonCheckboxes">
+                    <!-- Lesson checkboxes will be added here -->
+                </div>
             </div>
 
             <div class="control-group">
@@ -352,7 +383,7 @@
                 <label>&nbsp;</label>
                 <div class="checkbox-group">
                     <input type="checkbox" id="showCategory" checked>
-                    <label for="showCategory">Show category on cards</label>
+                    <label for="showCategory">Show category "hint" on cards</label>
                 </div>
             </div>
         </div>
@@ -360,57 +391,181 @@
         <div id="flashcardArea"></div>
     </div>
 
-    <script>
-        const vocabData = [{"Manx Gaelic":"braew","English":"fine","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"çhing","English":"sick","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"corree","English":"angry","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"feer vie","English":"very good","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"skee","English":"tired","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"feayr","English":"cold","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"çheh","English":"hot","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"mie","English":"good","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"beaghey","English":"living","Category":"Verbs","Lessoon":1},{"Manx Gaelic":"laccal","English":"wanting","Category":"Verbs","Lessoon":1},{"Manx Gaelic":"Purt le Moirrey","English":"Port St Mary","Category":"Places","Lessoon":1},{"Manx Gaelic":"Doolish","English":"Douglas","Category":"Places","Lessoon":1},{"Manx Gaelic":"ayns","English":"in","Category":"Prepositions","Lessoon":1},{"Manx Gaelic":"agh","English":"but","Category":"Conjunctions","Lessoon":1},{"Manx Gaelic":"kys?","English":"how?","Category":"Question Words","Lessoon":1},{"Manx Gaelic":"fastyr mie","English":"good afternoon","Category":"Greetings","Lessoon":1},{"Manx Gaelic":"bwo","English":"bhoy (boy)","Category":"Nouns","Lessoon":1},{"Manx Gaelic":"hene","English":"self","Category":"Pronouns","Lessoon":1},{"Manx Gaelic":"red beg","English":"a bit","Category":"Adjectives","Lessoon":1},{"Manx Gaelic":"gura mie ayd","English":"thank you","Category":"Greetings","Lessoon":1},{"Manx Gaelic":"nish","English":"now","Category":"Time","Lessoon":1},{"Manx Gaelic":"hee'm oo","English":"see you","Category":"Greetings","Lessoon":1},{"Manx Gaelic":"Ta mee braew","English":"I'm fine","Category":"Key Structures","Lessoon":1},{"Manx Gaelic":"Cha nel mee braew","English":"I'm not fine","Category":"Key Structures","Lessoon":1},{"Manx Gaelic":"Vel oo braew?","English":"Are you fine?","Category":"Key Structures","Lessoon":1},{"Manx Gaelic":"Kys t'ou?","English":"How are you?","Category":"Key Structures","Lessoon":1},{"Manx Gaelic":"gobbragh","English":"working","Category":"Verbs","Lessoon":2},{"Manx Gaelic":"Purt Çhiarn","English":"Port Erin","Category":"Places","Lessoon":2},{"Manx Gaelic":"Rhumsaa","English":"Ramsey","Category":"Places","Lessoon":2},{"Manx Gaelic":"Laksaa / Laksey","English":"Laxey","Category":"Places","Lessoon":2},{"Manx Gaelic":"Purt ny Hinshey","English":"Peel","Category":"Places","Lessoon":2},{"Manx Gaelic":"Balley Chashtal","English":"Castletown","Category":"Places","Lessoon":2},{"Manx Gaelic":"son","English":"because","Category":"Conjunctions","Lessoon":2},{"Manx Gaelic":"moghrey mie","English":"good morning","Category":"Greetings","Lessoon":2},{"Manx Gaelic":"s'mie shen!","English":"that's good!","Category":"Interjections","Lessoon":2},{"Manx Gaelic":"mie dy liooar","English":"ok (good enough)","Category":"Adjectives","Lessoon":2},{"Manx Gaelic":"slane lhiat","English":"goodbye","Category":"Greetings","Lessoon":2},{"Manx Gaelic":"toiggal","English":"understanding","Category":"Verbs","Lessoon":2},{"Manx Gaelic":"S'laik lhiam","English":"I like","Category":"Key Structures","Lessoon":2},{"Manx Gaelic":"Cha laik lhiam","English":"I don't like","Category":"Key Structures","Lessoon":2},{"Manx Gaelic":"Laik lhiat?","English":"Do you like?","Category":"Key Structures","Lessoon":2},{"Manx Gaelic":"gee","English":"eating","Category":"Verbs","Lessoon":3},{"Manx Gaelic":"giu","English":"drinking","Category":"Verbs","Lessoon":3},{"Manx Gaelic":"goll","English":"go","Category":"Verbs","Lessoon":3},{"Manx Gaelic":"cloie","English":"playing","Category":"Verbs","Lessoon":3},{"Manx Gaelic":"jannoo","English":"doing / making","Category":"Verbs","Lessoon":3},{"Manx Gaelic":"bee","English":"food","Category":"Nouns","Lessoon":3},{"Manx Gaelic":"tey","English":"tea","Category":"Nouns","Lessoon":3},{"Manx Gaelic":"caffee","English":"coffee","Category":"Nouns","Lessoon":3},{"Manx Gaelic":"ushtey","English":"water","Category":"Nouns","Lessoon":3},{"Manx Gaelic":"c'raad?","English":"where","Category":"Question Words","Lessoon":3},{"Manx Gaelic":"dagh laa","English":"every day","Category":"Time","Lessoon":3},{"Manx Gaelic":"lah","English":"yessir/lad","Category":"Nouns","Lessoon":3},{"Manx Gaelic":"shen","English":"that","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"Laik lhiat's...?","English":"do YOU like...?","Category":"Key Structures","Lessoon":3},{"Manx Gaelic":"paart","English":"some","Category":"Adjectives","Lessoon":3},{"Manx Gaelic":"moghrey jiu","English":"this morning","Category":"Time","Lessoon":3},{"Manx Gaelic":"quoi shoh?","English":"who's this?","Category":"Question Words","Lessoon":3},{"Manx Gaelic":"mee","English":"I / me","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"oo","English":"you","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"eh","English":"he / him / it","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"ee","English":"she / her / it","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"shin","English":"we / us","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"shiu","English":"you (plural)","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"ad","English":"they / them","Category":"Pronouns","Lessoon":3},{"Manx Gaelic":"moddey","English":"dog","Category":"Nouns","Lessoon":4},{"Manx Gaelic":"kayt","English":"cat","Category":"Nouns","Lessoon":4},{"Manx Gaelic":"eeast","English":"fish","Category":"Nouns","Lessoon":4},{"Manx Gaelic":"daa-wheeyl","English":"bike","Category":"Nouns","Lessoon":4},{"Manx Gaelic":"thie","English":"house","Category":"Nouns","Lessoon":4},{"Manx Gaelic":"folt","English":"hair","Category":"Nouns","Lessoon":4},{"Manx Gaelic":"aym","English":"at me","Category":"Prepositions","Lessoon":4},{"Manx Gaelic":"ayd","English":"at you","Category":"Prepositions","Lessoon":4},{"Manx Gaelic":"Ta kayt aym","English":"I have a cat","Category":"Key Structures","Lessoon":4},{"Manx Gaelic":"Cha nel kayt aym","English":"I don't have a cat","Category":"Key Structures","Lessoon":4},{"Manx Gaelic":"Ta kayt ayd","English":"You have a cat","Category":"Key Structures","Lessoon":4},{"Manx Gaelic":"Cha nel kayt ayd","English":"You don't have a cat","Category":"Key Structures","Lessoon":4},{"Manx Gaelic":"Vel kayt ayd?","English":"Do you have a cat?","Category":"Key Structures","Lessoon":4},{"Manx Gaelic":"Nagh vel kayt ayd?","English":"Don't you have a cat?","Category":"Key Structures","Lessoon":4}];
+    <footer>
+        Vocabulary from the Loayr Gaelg textbook, available at <a href="https://learnmanx.com" target="_blank" rel="noopener noreferrer">learnmanx.com</a><br>
+        Flashcards created by <a href="https://github.com/parnopaeus" target="_blank" rel="noopener noreferrer">Lauren Collister</a>
+    </footer>
 
-        let currentCards = [...vocabData];
+    <script>
+        let vocabData = [];
+        let currentCards = [];
         let currentIndex = 0;
         let isManxToEnglish = true;
         let showCategory = true;
+        let selectedLessons = new Set();
 
-        // Initialize filters
-        const lessonSelect = document.getElementById('lessonSelect');
-        const categorySelect = document.getElementById('categorySelect');
-        const showCategoryCheckbox = document.getElementById('showCategory');
+        // Load vocabulary from CSV file
+        async function loadVocabulary() {
+            try {
+                const response = await fetch('vocabulary.csv');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const csvText = await response.text();
+                console.log('CSV loaded, length:', csvText.length);
+                
+                // Parse CSV - simple parser that handles quoted fields
+                const lines = csvText.trim().split('\n');
+                const headers = lines[0].split(',').map(h => h.trim());
+                console.log('Headers:', headers);
+                
+                vocabData = [];
+                for (let i = 1; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    
+                    const values = parseCSVLine(line);
+                    if (values.length >= 4) {
+                        vocabData.push({
+                            'Manx Gaelic': values[0],
+                            'English': values[1],
+                            'Category': values[2],
+                            'Lessoon': parseInt(values[3])
+                        });
+                    }
+                }
+                
+                console.log(`Loaded ${vocabData.length} vocabulary entries`);
+                
+                if (vocabData.length === 0) {
+                    throw new Error('No vocabulary data loaded from CSV');
+                }
+                
+                initializeApp();
+            } catch (error) {
+                console.error('Error loading vocabulary:', error);
+                document.getElementById('flashcardArea').innerHTML = `
+                    <div class="empty-state">
+                        <h2>Error Loading Vocabulary</h2>
+                        <p>Could not load vocabulary.csv: ${error.message}</p>
+                        <p>Make sure the file is in the same directory as this HTML file and you're viewing the page through a web server (not file://).</p>
+                    </div>
+                `;
+            }
+        }
         
-        const lessons = [...new Set(vocabData.map(v => v.Lessoon))].sort();
-        lessons.forEach(lesson => {
-            const option = document.createElement('option');
-            option.value = lesson;
-            option.textContent = `Lessoon ${lesson}`;
-            lessonSelect.appendChild(option);
-        });
+        // Simple CSV line parser that handles quoted fields
+        function parseCSVLine(line) {
+            const values = [];
+            let currentValue = '';
+            let insideQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    insideQuotes = !insideQuotes;
+                } else if (char === ',' && !insideQuotes) {
+                    values.push(currentValue.trim());
+                    currentValue = '';
+                } else {
+                    currentValue += char;
+                }
+            }
+            values.push(currentValue.trim());
+            
+            return values;
+        }
 
-        const categories = [...new Set(vocabData.map(v => v.Category))].sort();
-        categories.forEach(category => {
-            const option = document.createElement('option');
-            option.value = category;
-            option.textContent = category;
-            categorySelect.appendChild(option);
-        });
+        function initializeApp() {
+            // Get unique lessons and initialize selectedLessons
+            const lessons = [...new Set(vocabData.map(v => v.Lessoon))].sort();
+            selectedLessons = new Set(lessons); // All lessons selected by default
+            
+            initializeFilters();
+            setupEventListeners();
+            filterCards();
+        }
 
-        // Direction toggle
-        document.getElementById('manxToEnglish').addEventListener('click', () => {
-            isManxToEnglish = true;
-            document.getElementById('manxToEnglish').classList.add('active');
-            document.getElementById('englishToManx').classList.remove('active');
-            renderCard();
-        });
+        function initializeFilters() {
+            const lessonCheckboxContainer = document.getElementById('lessonCheckboxes');
+            const categorySelect = document.getElementById('categorySelect');
+            
+            // Clear existing content
+            lessonCheckboxContainer.innerHTML = '';
+            categorySelect.innerHTML = '<option value="all">All Categories</option>';
+            
+            const lessons = [...new Set(vocabData.map(v => v.Lessoon))].sort();
+            console.log('Available lessons:', lessons);
+            
+            lessons.forEach(lesson => {
+                const checkboxGroup = document.createElement('div');
+                checkboxGroup.className = 'checkbox-group';
+                checkboxGroup.innerHTML = `
+                    <input type="checkbox" id="lesson${lesson}" value="${lesson}" checked>
+                    <label for="lesson${lesson}">Lessoon ${lesson}</label>
+                `;
+                lessonCheckboxContainer.appendChild(checkboxGroup);
+                
+                // Add event listener to each checkbox
+                const checkbox = checkboxGroup.querySelector('input');
+                checkbox.addEventListener('change', (e) => {
+                    const lessonNum = parseInt(e.target.value);
+                    if (e.target.checked) {
+                        selectedLessons.add(lessonNum);
+                    } else {
+                        selectedLessons.delete(lessonNum);
+                    }
+                    console.log('Selected lessons:', Array.from(selectedLessons));
+                    filterCards();
+                });
+            });
 
-        document.getElementById('englishToManx').addEventListener('click', () => {
-            isManxToEnglish = false;
-            document.getElementById('englishToManx').classList.add('active');
-            document.getElementById('manxToEnglish').classList.remove('active');
-            renderCard();
-        });
+            const categories = [...new Set(vocabData.map(v => v.Category))].sort();
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category;
+                option.textContent = category;
+                categorySelect.appendChild(option);
+            });
+        }
+
+        function setupEventListeners() {
+            const categorySelect = document.getElementById('categorySelect');
+            const showCategoryCheckbox = document.getElementById('showCategory');
+
+            // Direction toggle
+            document.getElementById('manxToEnglish').addEventListener('click', () => {
+                isManxToEnglish = true;
+                document.getElementById('manxToEnglish').classList.add('active');
+                document.getElementById('englishToManx').classList.remove('active');
+                renderCard();
+            });
+
+            document.getElementById('englishToManx').addEventListener('click', () => {
+                isManxToEnglish = false;
+                document.getElementById('englishToManx').classList.add('active');
+                document.getElementById('manxToEnglish').classList.remove('active');
+                renderCard();
+            });
+
+            categorySelect.addEventListener('change', filterCards);
+            document.getElementById('shuffleBtn').addEventListener('click', shuffleCards);
+            showCategoryCheckbox.addEventListener('change', (e) => {
+                showCategory = e.target.checked;
+                renderCard();
+            });
+        }
 
         // Filter and shuffle functions
         function filterCards() {
-            const lesson = lessonSelect.value;
-            const category = categorySelect.value;
+            const categorySelect = document.getElementById('categorySelect');
+            const category = categorySelect ? categorySelect.value : 'all';
 
             currentCards = vocabData.filter(card => {
-                const lessonMatch = lesson === 'all' || card.Lessoon == lesson;
+                const lessonMatch = selectedLessons.size === 0 || selectedLessons.has(card.Lessoon);
                 const categoryMatch = category === 'all' || card.Category === category;
                 return lessonMatch && categoryMatch;
             });
@@ -424,14 +579,6 @@
             currentIndex = 0;
             renderCard();
         }
-
-        lessonSelect.addEventListener('change', filterCards);
-        categorySelect.addEventListener('change', filterCards);
-        document.getElementById('shuffleBtn').addEventListener('click', shuffleCards);
-        showCategoryCheckbox.addEventListener('change', (e) => {
-            showCategory = e.target.checked;
-            renderCard();
-        });
 
         // Card rendering
         function renderCard() {
@@ -535,8 +682,8 @@
             }
         }
 
-        // Initial render
-        renderCard();
+        // Initialize app by loading vocabulary
+        loadVocabulary();
     </script>
 </body>
 </html>
