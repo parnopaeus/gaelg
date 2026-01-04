@@ -1,4 +1,4 @@
-Manx Gaelic,English,Category,Lessoon
+Manx,English,Category,Lesson
 braew,fine,Adjectives,1
 çhing,sick,Adjectives,1
 corree,angry,Adjectives,1
@@ -14,13 +14,13 @@ Doolish,Douglas,Places,1
 ayns,in,Prepositions,1
 agh,but,Conjunctions,1
 kys?,how?,Question Words,1
-fastyr mie,good afternoon,Greetings,1
-bwo,bhoy (boy),Nouns,1
-hene,self,Pronouns,1
-red beg,a bit,Adjectives,1
-gura mie ayd,thank you,Greetings,1
-nish,now,Time,1
-hee'm oo,see you,Greetings,1
+fastyr mie,good afternoon,Conversation Phrases,1
+bwo,bhoy (boy),Interjections,1
+hene,self,Conversation Phrases,1
+red beg,a bit,Conversation Phrases,1
+gura mie ayd,thank you,Conversation Phrases,1
+nish,now,Conversation Phrases,1
+hee'm oo,see you,Conversation Phrases,1
 Ta mee braew,I'm fine,Key Structures,1
 Cha nel mee braew,I'm not fine,Key Structures,1
 Vel oo braew?,Are you fine?,Key Structures,1
@@ -32,10 +32,10 @@ Laksaa / Laksey,Laxey,Places,2
 Purt ny Hinshey,Peel,Places,2
 Balley Chashtal,Castletown,Places,2
 son,because,Conjunctions,2
-moghrey mie,good morning,Greetings,2
-s'mie shen!,that's good!,Interjections,2
-mie dy liooar,ok (good enough),Adjectives,2
-slane lhiat,goodbye,Greetings,2
+moghrey mie,good morning,Conversation Phrases,2
+s'mie shen!,that's good!,Conversation Phrases,2
+mie dy liooar,ok (good enough),Conversation Phrases,2
+slane lhiat,goodbye,Conversation Phrases,2
 toiggal,understanding,Verbs,2
 S'laik lhiam,I like,Key Structures,2
 Cha laik lhiam,I don't like,Key Structures,2
@@ -50,35 +50,30 @@ tey,tea,Nouns,3
 caffee,coffee,Nouns,3
 ushtey,water,Nouns,3
 c'raad?,where,Question Words,3
-nish,now,Time,3
-dagh laa,every day,Time,3
-lah,yessir/lad,Nouns,3
+lah,lad / yessir,Interjections,3
 shen,that,Pronouns,3
-Laik lhiat's...?,do YOU like...?,Key Structures,3
 paart,some,Adjectives,3
-moghrey jiu,this morning,Time,3
+moghrey jiu,this morning,Time Expressions,3
 quoi shoh?,who's this?,Question Words,3
-mee,I / me,Pronouns,3
-oo,you,Pronouns,3
-eh,he / him / it,Pronouns,3
-ee,she / her / it,Pronouns,3
-shin,we / us,Pronouns,3
-shiu,you (plural),Pronouns,3
-ad,they / them,Pronouns,3
 moddey,dog,Nouns,4
 kayt,cat,Nouns,4
 eeast,fish,Nouns,4
 daa-wheeyl,bike,Nouns,4
 thie,house,Nouns,4
 folt,hair,Nouns,4
-aym,at me,Prepositions,4
-ayd,at you,Prepositions,4
-Ta kayt aym,I have a cat,Key Structures,4
-Cha nel kayt aym,I don't have a cat,Key Structures,4
-Ta kayt ayd,You have a cat,Key Structures,4
-Cha nel kayt ayd,You don't have a cat,Key Structures,4
-Vel kayt ayd?,Do you have a cat?,Key Structures,4
-Nagh vel kayt ayd?,Don't you have a cat?,Key Structures,4
+aym,at me,Pronouns,4
+ayd,at you,Pronouns,4
+s'treih shen,that's bad,Conversation Phrases,4
+eisht,then,Adverbs,4
+tholtan,a ruin,Nouns,4
+yn twoaie,the north,Nouns,4
+yn jiass,the south,Nouns,4
+y pryssoon,the prison,Nouns,4
+aalin,beautiful,Adjectives,4
+shooyl,walking,Verbs,4
+neesht,too / as well,Adverbs,4
+litçheragh,lazy,Adjectives,4
+shen yn aght,that's the way,Conversation Phrases,4
 bane,white,Adjectives,5
 doo,black,Adjectives,5
 jiarg,red,Adjectives,5
@@ -88,36 +83,17 @@ dhone,brown,Adjectives,5
 fys,knowledge,Nouns,5
 gynsagh Gaelg,learning Manx,Verbs,5
 cre?,what?,Question Words,5
-ayns y voghrey,in the morning,Time,5
-Ta fys aym,I know,Key Structures,5
-Cha nel fys aym,I don't know,Key Structures,5
-Ta fys ayd,You know,Key Structures,5
-Cha nel fys ayd,You don't know,Key Structures,5
-Vel fys ayd?,Do you know?,Key Structures,5
-Nagh vel fys ayd?,Don't you know?,Key Structures,5
+ayns y voghrey,in the morning,Time Expressions,5
+edyr,at all,Adverbs,5
+caillit,lost,Adjectives,5
+thie-bee,café,Nouns,5
+my sailt,please,Conversation Phrases,5
+soo,juice,Nouns,5
+slaynt vie,cheers,Interjections,5
 arran,bread,Nouns,6
 feeyn,wine,Nouns,6
 bainney,milk,Nouns,6
 ny,or,Conjunctions,6
-Share lhiam,I prefer,Key Structures,6
-Nhare lhiat?,Do you prefer?,Key Structures,6
-edyr,at all,Other Words,5
-caillit,lost,Adjectives,5
-ve,to be / being,Verbs,5
-thie bee,café,Nouns,5
-my sailt,please,Greetings,5
-soo,juice,Nouns,5
-slaynt vie,cheers,Greetings,5
-s,is,Grammar,6
-laik,a like,Grammar,6
-lhiam,with me,Prepositions,6
-lhiat,with you,Prepositions,6
-lesh,with him / with,Prepositions,6
-lhee,with her,Prepositions,6
-s'mie lhiam,I like (alternate),Key Structures,6
-lhien,with us,Prepositions,6
-lhiu,with you (plural),Prepositions,6
-lhieu,with them,Prepositions,6
 shappal,shopping,Verbs,7
 goll magh,going out,Verbs,7
 kionnagh(ey),buying,Verbs,7
@@ -125,20 +101,169 @@ cloie kiaull,playing music,Verbs,7
 jeeaghyn er,looking at / watching,Verbs,7
 cadley,sleeping,Verbs,7
 quoi?,who?,Question Words,7
-Jesarn,Saturday,Days,7
-ghooinney,man,Nouns,7
-dy jarroo,indeed,Other Words,7
-airh,gold,Nouns,7
-yindyssagh,wonderful,Adjectives,7
-quoi uss?,who are you?,Conversation Phrases,8
-mish,me (emphasised),Pronouns,8
-rour,too much,Adjectives,8
-tra,when (relative),Other Words,8
-shapp,shop,Nouns,8
-gow my leshtal,sorry,Greetings,8
-maynrey,happy,Adjectives,8
-echey,at him,Prepositions,8
-eck,at her,Prepositions,8
-ain,at us,Prepositions,8
-eu,at you (plural),Prepositions,8
-oc,at them,Prepositions,8
+Jesarn,Saturday,Days of the Week,7
+echey,at him / his,Pronouns,8
+eck,at her / her,Pronouns,8
+Jedoonee,Sunday,Days of the Week,9
+jea,yesterday,Time Expressions,9
+jiu,today,Time Expressions,9
+cre'n oyr?,why?,Question Words,10
+cre'n fa?,why?,Question Words,10
+yn,the,Articles,10
+braar,brother,Nouns,11
+carrey,friend,Nouns,11
+shuyr,sister,Nouns,11
+nane,1,Numbers,11
+jees,2,Numbers,11
+three,3,Numbers,11
+kiare,4,Numbers,11
+queig,5,Numbers,11
+shey,6,Numbers,11
+shiaght,7,Numbers,11
+hoght,8,Numbers,11
+nuy,9,Numbers,11
+jeih,10,Numbers,11
+Jelhein,Monday,Days of the Week,12
+Jelune,Monday (alt),Days of the Week,12
+Jemayrt,Tuesday,Days of the Week,12
+Jecrean,Wednesday,Days of the Week,12
+Jerdein,Thursday,Days of the Week,12
+Jeheiney,Friday,Days of the Week,12
+moghrey,morning,Time Expressions,12
+fastyr,afternoon,Time Expressions,12
+cuin?,when?,Question Words,13
+ruggit,born,Verbs,13
+ayns yn astyr,in the afternoon,Time Expressions,13
+nane-jeig,11,Numbers,14
+daa-yeig,12,Numbers,14
+three-jeig,13,Numbers,14
+kiare-jeig,14,Numbers,14
+queig-jeig,15,Numbers,14
+shey-jeig,16,Numbers,14
+shiaght-jeig,17,Numbers,14
+hoght-jeig,18,Numbers,14
+nuy-jeig,19,Numbers,14
+feed,20,Numbers,14
+foddee,maybe,Adverbs,15
+licklee,probably / likely,Adverbs,15
+accryssagh,hungry,Adjectives,16
+paagh,thirsty,Adjectives,16
+agglagh,awful,Adjectives,16
+ve,to be / being,Verbs,16
+rhullick,graveyard,Nouns,16
+bannee mee!,bless me!,Interjections,16
+ayns shen,there,Adverbs,16
+dy valley,homewards,Adverbs,16
+scaanjoon,ghost,Nouns,16
+goll neeal,fainting,Verbs,16
+buggane,buggane,Nouns,16
+scooyrit,drunk,Adjectives,16
+dy nee,that it is,Conjunctions,16
+follaghey,hiding,Verbs,16
+gansee,jumper,Nouns,16
+ersooyl,away,Adverbs,16
+doostey,waking,Verbs,16
+thie-lheiys,hospital,Nouns,16
+hooin roin!,let's go!,Conversation Phrases,16
+mairagh,tomorrow,Time Expressions,17
+bouyr,deaf,Adjectives,17
+kiart dy liooar,right enough,Conversation Phrases,17
+foast bio,still alive,Conversation Phrases,17
+cleayshyn,ears,Nouns,17
+gonnagh,sore,Adjectives,17
+goaill,taking,Verbs,17
+reesht,again,Adverbs,17
+minnid,minute,Nouns,17
+Sostyn,England,Places,17
+orroosyn,on them,Pronouns,17
+dooyrt,said,Verbs,17
+dys shen,to there,Adverbs,17
+woieaghyn,boys,Nouns,14
+enmyssit,called,Verbs,14
+kiyt,cats,Nouns,14
+dy jarroo,indeed,Interjections,14
+keayney,crying,Verbs,14
+sheanse,science,Nouns,15
+roauyr,fat,Adjectives,15
+Divlyn,Dublin,Places,15
+jollyssagh,greedy,Adjectives,15
+paitçhyn,children,Nouns,15
+riyr,last night,Time Expressions,15
+traa ry-heet,future,Nouns,15
+tilgey,vomiting,Verbs,15
+beiyn,animals,Nouns,15
+fakin,seeing,Verbs,15
+skeay,vomit,Nouns,15
+skellal ersooyl,disappearing,Verbs,15
+tobbyr,bath,Nouns,15
+ansherbee,anyway,Adverbs,15
+red ennagh,something,Pronouns,18
+myr shen,so,Conjunctions,18
+taghyrt,happening,Verbs,18
+drappal,climbing,Verbs,18
+er-aile,on fire,Adjectives,18
+seose,up,Adverbs,18
+gaarlaghey,cooking,Verbs,18
+billey,tree,Nouns,18
+anjeeal,breakfast,Nouns,18
+fosley,opening,Verbs,18
+geamagh,calling,Verbs,18
+uinnag,window,Nouns,18
+jarrood,forgetting,Verbs,18
+maynrey,happy,Adjectives,18
+marish,with,Prepositions,18
+clashtyn,hearing,Verbs,18
+garey,garden,Nouns,18
+cur,putting,Verbs,18
+ec y traa v'ayn,at that time,Time Expressions,18
+trimshagh,sad,Adjectives,18
+jaagh,smoke,Nouns,18
+shamyr-lhiabbagh,bedroom,Nouns,18
+abyl,able,Adjectives,18
+scapail,escaping,Verbs,18
+mwashag,wig,Nouns,10
+marroo,killing,Verbs,10
+goaill cooilleen,taking revenge,Verbs,10
+Sayōnara,goodbye,Conversation Phrases,10
+mee,I / me,Pronouns,Appendix
+oo,you,Pronouns,Appendix
+eh,he / him,Pronouns,Appendix
+ee,she / her,Pronouns,Appendix
+shin,we / us,Pronouns,Appendix
+shiu,you (pl),Pronouns,Appendix
+ad,they / them,Pronouns,Appendix
+ain,at us,Pronouns,Appendix
+eu,at you (pl),Pronouns,Appendix
+oc,at them,Pronouns,Appendix
+lhiam,with me,Pronouns,Appendix
+lhiat,with you,Pronouns,Appendix
+lesh,with him,Pronouns,Appendix
+lhee,with her,Pronouns,Appendix
+lhien,with us,Pronouns,Appendix
+lhiu,with you (pl),Pronouns,Appendix
+lhieu,with them,Pronouns,Appendix
+orrym,on me,Pronouns,Appendix
+ort,on you,Pronouns,Appendix
+er,on him,Pronouns,Appendix
+urree,on her,Pronouns,Appendix
+orrin,on us,Pronouns,Appendix
+erriu,on you (pl),Pronouns,Appendix
+orroo,on them,Pronouns,Appendix
+barroose,bus,Nouns,Appendix
+obbyr,work (noun),Nouns,9
+lhiabbee,bed,Nouns,9
+feiy'n laa,all day,Time Expressions,9
+foast,still,Adverbs,9
+cooinaghtyn,recalling,Verbs,9
+monney,much,Adjectives,9
+thie-fillym,cinema,Nouns,9
+balley,town,Nouns,13
+claghyn,stones,Nouns,13
+traie,beach,Nouns,13
+sleih,people,Nouns,13
+yindyssagh,great,Adjectives,13
+eddyr,between,Prepositions,13
+braghtan,sandwich,Nouns,13
+logh,lake,Nouns,13
+skimmal,skimming,Verbs,13
+spollagyn,chips,Nouns,13
