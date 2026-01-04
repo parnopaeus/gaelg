@@ -413,6 +413,10 @@
                     <summary>
                         <span id="lessonSummary">Choose lessons (0 selected)</span>
                     </summary>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;">
+                        <button class="nav-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="selectAllLessons()">Select All</button>
+                        <button class="nav-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="deselectAllLessons()">Deselect All</button>
+                    </div>
                     <div class="lesson-grid" id="lessonCheckboxes"></div>
                 </details>
             </div>
@@ -544,6 +548,18 @@
                 selectedCount === totalCount ? `All lessons selected (${totalCount})` :
                 selectedCount === 0 ? 'Choose lessons (0 selected)' :
                 `${selectedCount} of ${totalCount} lessons selected`;
+        }
+
+        function selectAllLessons() {
+            const checkboxes = document.querySelectorAll('#lessonCheckboxes input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = true);
+            updateLessonSummary();
+        }
+
+        function deselectAllLessons() {
+            const checkboxes = document.querySelectorAll('#lessonCheckboxes input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = false);
+            updateLessonSummary();
         }
 
         let selectedCategory = null;
