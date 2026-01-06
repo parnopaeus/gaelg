@@ -471,21 +471,29 @@
                 const response = await fetch('vocabulary-keim-jees.csv');
                 const text = await response.text();
                 
-                // Parse CSV
-                const lines = text.trim().split('\n');
+                // Parse CSV - handle both quoted and unquoted fields
+                const lines = text.trim().split(/\r?\n/);
                 vocabulary = [];
                 
                 // Skip header row
                 for (let i = 1; i < lines.length; i++) {
-                    const line = lines[i];
-                    const match = line.match(/^(\d+),"([^"]*)","([^"]*)","([^"]*)"/);
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    
+                    // Try quoted format first: 1,"word","translation","category"
+                    let match = line.match(/^(\d+),"([^"]*)","([^"]*)","([^"]*)"/);
+                    
+                    // Try unquoted format: 1,word,translation,category
+                    if (!match) {
+                        match = line.match(/^(\d+),([^,]+),([^,]+),(.+)$/);
+                    }
                     
                     if (match) {
                         vocabulary.push({
                             lesson: parseInt(match[1]),
-                            manx: match[2],
-                            english: match[3],
-                            category: match[4]
+                            manx: match[2].trim(),
+                            english: match[3].trim(),
+                            category: match[4].trim()
                         });
                     }
                 }
