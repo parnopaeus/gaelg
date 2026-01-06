@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loayr Gaelg - Keim Jees Flashcards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #4A90E2;
+            --light-blue: #E3F2FD;
+            --bright-blue: #2196F3;
+            --dark-blue: #1565C0;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--dark-blue);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--bright-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--sky-blue);
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .controls {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .control-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .control-group:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--dark-blue);
+            font-size: 1.1rem;
+        }
+
+        .lesson-selector {
+            border: 2px solid var(--sky-blue);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .lesson-header {
+            background: var(--sky-blue);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .lesson-header:hover {
+            background: var(--bright-blue);
+        }
+
+        .lesson-header .arrow {
+            transition: transform 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .lesson-header.expanded .arrow {
+            transform: rotate(180deg);
+        }
+
+        .lesson-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+
+        .lesson-content.expanded {
+            max-height: 600px;
+            padding: 1.5rem;
+            border-top: 2px solid var(--light-blue);
+        }
+
+        .lesson-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .lesson-buttons button {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--sky-blue);
+            background: white;
+            color: var(--dark-blue);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .lesson-buttons button:hover {
+            background: var(--sky-blue);
+            color: white;
+        }
+
+        .checkbox-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--sky-blue);
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .radio-item input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--sky-blue);
+        }
+
+        .radio-item label {
+            margin: 0;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--sky-blue);
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .start-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--bright-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+        }
+
+        .start-btn:hover {
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(33, 150, 243, 0.4);
+        }
+
+        .flashcard-container {
+            perspective: 1000px;
+            min-height: 400px;
+        }
+
+        .flashcard {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .card-front {
+            background: white;
+        }
+
+        .card-back {
+            background: var(--sky-blue);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .card-text {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        .card-hint {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            margin-top: 1rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            padding: 0.75rem 2rem;
+            border: 2px solid var(--sky-blue);
+            background: white;
+            color: var(--dark-blue);
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--bright-blue);
+            background: var(--bright-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--dark-blue);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--dark-blue);
+        }
+
+        .empty-state h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--bright-blue);
+        }
+
+        .attribution {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--light-blue);
+            color: var(--dark-blue);
+            font-size: 0.9rem;
+        }
+
+        .attribution a {
+            color: var(--bright-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .attribution a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .card-text {
+                font-size: 1.8rem;
+            }
+
+            .checkbox-list {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .nav-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loayr Gaelg - Keim Jees</h1>
+        <div class="subtitle">Manx Gaelic Flashcards</div>
+    </header>
+
+    <div class="container">
+        <div id="controls" class="controls">
+            <div class="control-group">
+                <label>Select Lessoon(yn)</label>
+                <div class="lesson-selector">
+                    <div class="lesson-header" onclick="toggleLessonSelector()">
+                        <span id="lessonSummary">All lessons selected (20)</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="lesson-content" id="lessonContent">
+                        <div class="lesson-buttons">
+                            <button onclick="selectAllLessons()">Select All</button>
+                            <button onclick="deselectAllLessons()">Deselect All</button>
+                        </div>
+                        <div class="checkbox-list" id="lessonCheckboxes">
+                            <!-- Lesson checkboxes will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Filter by Category</label>
+                <div class="checkbox-list" id="categoryCheckboxes">
+                    <!-- Category checkboxes will be added here -->
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Translation Direction</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="manx-to-english" name="direction" value="manx-to-english" checked>
+                        <label for="manx-to-english">Manx → English</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="english-to-manx" name="direction" value="english-to-manx">
+                        <label for="english-to-manx">English → Manx</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="show-hints" checked>
+                    <label for="show-hints">Show category hints on cards</label>
+                </div>
+            </div>
+
+            <button class="start-btn" onclick="startFlashcards()">Start Practice</button>
+        </div>
+
+        <div id="flashcardArea"></div>
+    </div>
+
+    <div class="attribution">
+        <p>Vocabulary from the Loayr Gaelg textbook, available at <a href="https://learnmanx.com" target="_blank">learnmanx.com</a></p>
+        <p>Flashcards created by <a href="https://github.com/parnopaeus" target="_blank">Lauren B. Collister</a></p>
+    </div>
+
+    <script>
+        let vocabulary = [];
+        let currentCards = [];
+        let currentIndex = 0;
+        let isFlipped = false;
+
+        // Load vocabulary from CSV file
+        async function loadVocabulary() {
+            try {
+                const response = await fetch('vocabulary-keim-jees.csv');
+                const text = await response.text();
+                
+                // Parse CSV
+                const lines = text.trim().split('\n');
+                vocabulary = [];
+                
+                // Skip header row
+                for (let i = 1; i < lines.length; i++) {
+                    const line = lines[i];
+                    const match = line.match(/^(\d+),"([^"]*)","([^"]*)","([^"]*)"/);
+                    
+                    if (match) {
+                        vocabulary.push({
+                            lesson: parseInt(match[1]),
+                            manx: match[2],
+                            english: match[3],
+                            category: match[4]
+                        });
+                    }
+                }
+                
+                console.log(`Loaded ${vocabulary.length} vocabulary entries`);
+                populateFilters();
+            } catch (error) {
+                console.error('Error loading vocabulary:', error);
+                alert('Error loading vocabulary file. Make sure vocabulary-keim-jees.csv is in the same directory as this HTML file.');
+            }
+        }
+
+        function populateFilters() {
+            // Populate lesson checkboxes
+            const lessons = [...new Set(vocabulary.map(v => v.lesson))].sort((a, b) => a - b);
+            const lessonCheckboxes = document.getElementById('lessonCheckboxes');
+            lessonCheckboxes.innerHTML = '';
+            
+            lessons.forEach(lesson => {
+                const div = document.createElement('div');
+                div.className = 'checkbox-item';
+                div.innerHTML = `
+                    <input type="checkbox" id="lesson-${lesson}" value="${lesson}" checked onchange="updateLessonSummary()">
+                    <label for="lesson-${lesson}">Lessoon ${lesson}</label>
+                `;
+                lessonCheckboxes.appendChild(div);
+            });
+
+            // Populate category checkboxes
+            const categories = [...new Set(vocabulary.map(v => v.category))].sort();
+            const categoryCheckboxes = document.getElementById('categoryCheckboxes');
+            categoryCheckboxes.innerHTML = '';
+            
+            categories.forEach(category => {
+                const div = document.createElement('div');
+                div.className = 'checkbox-item';
+                div.innerHTML = `
+                    <input type="checkbox" id="cat-${category}" value="${category}" checked>
+                    <label for="cat-${category}">${category}</label>
+                `;
+                categoryCheckboxes.appendChild(div);
+            });
+        }
+
+        function toggleLessonSelector() {
+            const header = document.querySelector('.lesson-header');
+            const content = document.getElementById('lessonContent');
+            header.classList.toggle('expanded');
+            content.classList.toggle('expanded');
+        }
+
+        function updateLessonSummary() {
+            const checkboxes = document.querySelectorAll('#lessonCheckboxes input[type="checkbox"]');
+            const selectedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const totalCount = checkboxes.length;
+            document.getElementById('lessonSummary').textContent = 
+                selectedCount === totalCount ? `All lessons selected (${totalCount})` :
+                selectedCount === 0 ? 'Choose lessons (0 selected)' :
+                `${selectedCount} of ${totalCount} lessons selected`;
+        }
+
+        function selectAllLessons() {
+            const checkboxes = document.querySelectorAll('#lessonCheckboxes input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = true);
+            updateLessonSummary();
+        }
+
+        function deselectAllLessons() {
+            const checkboxes = document.querySelectorAll('#lessonCheckboxes input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = false);
+            updateLessonSummary();
+        }
+
+        function startFlashcards() {
+            // Get selected lessons
+            const selectedLessons = Array.from(document.querySelectorAll('#lessonCheckboxes input:checked'))
+                .map(cb => parseInt(cb.value));
+            
+            // Get selected categories
+            const selectedCategories = Array.from(document.querySelectorAll('#categoryCheckboxes input:checked'))
+                .map(cb => cb.value);
+            
+            // Get direction
+            const direction = document.querySelector('input[name="direction"]:checked').value;
+            
+            // Get show hints preference
+            const showHints = document.getElementById('show-hints').checked;
+            
+            // Filter vocabulary
+            currentCards = vocabulary.filter(v => 
+                selectedLessons.includes(v.lesson) && 
+                selectedCategories.includes(v.category)
+            ).map(v => ({
+                front: direction === 'manx-to-english' ? v.manx : v.english,
+                back: direction === 'manx-to-english' ? v.english : v.manx,
+                category: v.category,
+                showHints: showHints
+            }));
+            
+            if (currentCards.length === 0) {
+                document.getElementById('flashcardArea').innerHTML = `
+                    <div class="empty-state">
+                        <h2>No cards to show</h2>
+                        <p>Try selecting different lessons or categories</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Shuffle cards
+            currentCards.sort(() => Math.random() - 0.5);
+            
+            // Hide controls and show first card
+            document.getElementById('controls').style.display = 'none';
+            currentIndex = 0;
+            showCard();
+        }
+
+        function showCard() {
+            const card = currentCards[currentIndex];
+            const showHints = card.showHints;
+            
+            document.getElementById('flashcardArea').innerHTML = `
+                <div class="flashcard-container">
+                    <div class="flashcard" id="flashcard" onclick="flipCard()">
+                        <div class="card-face card-front">
+                            <div class="card-text">${card.front}</div>
+                            ${showHints ? `<div class="card-hint">${card.category}</div>` : ''}
+                        </div>
+                        <div class="card-face card-back">
+                            <div class="card-text">${card.back}</div>
+                            ${showHints ? `<div class="card-hint">${card.category}</div>` : ''}
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="nav-btn" onclick="previousCard()" ${currentIndex === 0 ? 'disabled' : ''}>← Previous</button>
+                        <button class="nav-btn" onclick="nextCard()">Next →</button>
+                        <button class="nav-btn" onclick="endSession()">End Session</button>
+                    </div>
+                    <div class="progress">Card ${currentIndex + 1} of ${currentCards.length}</div>
+                </div>
+            `;
+            
+            isFlipped = false;
+        }
+
+        function flipCard() {
+            const card = document.getElementById('flashcard');
+            card.classList.toggle('flipped');
+            isFlipped = !isFlipped;
+        }
+
+        function nextCard() {
+            if (currentIndex < currentCards.length - 1) {
+                currentIndex++;
+                showCard();
+            }
+        }
+
+        function previousCard() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showCard();
+            }
+        }
+
+        function endSession() {
+            document.getElementById('controls').style.display = 'block';
+            document.getElementById('flashcardArea').innerHTML = '';
+        }
+
+        // Load vocabulary on page load
+        loadVocabulary();
+    </script>
+</body>
+</html>

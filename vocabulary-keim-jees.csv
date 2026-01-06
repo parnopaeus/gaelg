@@ -1,0 +1,208 @@
+Lesson,Manx,English,Category
+1,fliugh,wet,Adjective
+1,çhirrym,dry,Adjective
+1,grianagh,sunny,Adjective
+1,geayagh,windy,Adjective
+1,bodjallagh,cloudy,Adjective
+1,emshyr,weather,Noun
+1,myr,as,Conjunction
+1,arroo y jea,day before yesterday,Time
+1,dorraghey,dark,Adjective
+1,ec y traa t'ayn,at the moment,Time
+1,feiy'n laa,all day,Time
+1,sniaghtey,snow,Noun
+1,croink,hills,Noun
+1,noght,tonight,Time
+1,rio,ice,Noun
+1,raaidyn,roads,Noun
+1,raad,where,Question Word
+2,thie-bee,cafe,Noun
+2,er y traie,on the beach,Preposition
+2,çheet,coming,Verb
+2,dys shen,there (to that),Preposition
+2,toiggal,understanding,Verb
+2,fuirraghtyn,staying,Verb
+2,voish,from,Preposition
+2,ram,many,Adjective
+2,shickyr,sure,Adjective
+2,hooin roin,let's go,Interjection
+3,taaue,idle / retired,Adjective
+3,ynseydagh,student,Noun
+3,ben-lhee,female doctor,Noun
+3,fer-lhee,male doctor,Noun
+3,ben-ynsee,female teacher,Noun
+3,fer-ynsee,male teacher,Noun
+3,ben-obbee,witch,Noun
+3,fer-obbee,wizard,Noun
+3,guru,guru,Noun
+3,banceyr,banker,Noun
+3,kiaulleyder,musician,Noun
+3,arraneyder,singer,Noun
+4,er-dy-henney,ago,Time
+4,mooar,big,Adjective
+4,reesht,again,Adverb
+4,tra,when,Conjunction
+4,glutterey,glutton,Noun
+4,noght,tonight,Time
+4,ansh erbee,anyway,Adverb
+4,monney,much,Adverb
+4,argid,money,Noun
+4,spotçheraght,joking,Verb
+4,dy liooar,enough,Adverb
+5,goll as gaccan,going and grumbling,Verb
+5,fosley,opening,Verb
+5,spotçheraght,joking,Verb
+5,son ayd,for you,Preposition
+5,pabyr-naight,newspaper,Noun
+5,neesht,too,Adverb
+5,boayrd,table,Noun
+5,faagail,leaving,Verb
+5,roie,before,Preposition
+5,jiole,sucking,Verb
+5,cooinaghtyn,remembering,Verb
+5,poshag,pocket,Noun
+6,daunsin,dancing,Verb
+6,peiagh erbee,anyone,Pronoun
+6,gra,saying,Verb
+6,neesht,too / also,Adverb
+6,ansh erbee,anyway,Adverb
+6,jeant,done / finished,Verb
+6,reesht,again,Adverb
+6,oie vie,good night,Interjection
+8,foddym,I can,Verb
+8,cha noddym,I can't,Verb
+8,nod oo,can you,Verb
+9,mooar,big,Adjective
+9,aalin,beautiful,Adjective
+9,cha mooar as,as big as,Conjunction
+9,cha aalin as,as beautiful as,Conjunction
+10,coraa,voice,Noun
+10,bing,melodious,Adjective
+10,trimshagh,sad,Adjective
+10,fakin,seeing,Verb
+10,awin,river,Noun
+10,screeu,writing,Verb
+10,ny sanmey,later,Time
+10,feddyn,finding,Verb
+10,seyr,carpenter,Noun
+10,çhymsagh,gathering,Verb
+10,fuygh,wood,Noun
+10,broogh,bank,Noun
+10,guilley,boy,Noun
+10,magh ass,out of,Preposition
+10,sheese,down,Adverb
+10,briaght,asking,Verb
+10,cailt,lost,Adjective
+10,er shen,then (on that),Time
+10,thalloo,ground,Noun
+10,ynnydyn-coshey,footprints,Noun
+10,laagh,mud,Noun
+10,geiyrt er,following (on),Verb
+10,mygeayrt,around,Preposition
+10,elley,another / other,Adjective
+10,noa,new,Adjective
+10,goll er mooin y cheilley,copulating,Verb
+11,yn thie shoh,this house,Pronoun
+11,yn thie shen,that house,Pronoun
+11,quoid paitçhey t'ayd?,how many children do you have?,Question Word
+11,quoid t'eh costal?,how much does it cost?,Question Word
+12,ny smoo na,bigger than,Adjective
+12,ny sloo na,smaller than,Adjective
+12,ny s'aaley na,more beautiful than,Adjective
+13,loayrt rhym,speaking to me,Verb
+13,loayrt rhyt,speaking to you,Verb
+13,loayrt rish,speaking to him,Verb
+13,loayrt r'ee,speaking to her,Verb
+14,er ve gobbragh,been working,Verb
+14,er ve giu,been drinking,Verb
+14,er ve çhing,been sick,Verb
+14,er ve ayns,been in,Verb
+14,er ve gee,been eating,Verb
+16,baarey,shaving,Verb
+16,fakin,seeing,Verb
+16,mongey,smiling,Verb
+16,paagey,kissing,Verb
+16,troggal,building,Verb
+16,broogh,bank,Noun
+16,tammylt,while,Noun
+16,guilley,boy,Noun
+16,skeabey,sweeping,Verb
+16,ersooyl,away,Adverb
+16,feme,in need (of),Noun
+16,cooney,help,Noun
+16,throng,busy,Adjective
+16,noa,new,Adjective
+16,ro,too,Adverb
+16,roshtyn,reaching,Verb
+16,geddyn,getting,Verb
+16,er shen,at that moment (on that),Time
+16,harrish,over,Preposition
+16,kiangley,tying,Verb
+16,tedd,rope,Noun
+16,jeeagh,look,Interjection
+16,feddyn,finding,Verb
+16,lheim,jumping,Verb
+17,neesht,too / as well,Adverb
+17,noadyr,neither,Adverb
+17,mish,I (emphatic),Pronoun
+17,uss,you (emphatic),Pronoun
+17,eshyn,he (emphatic),Pronoun
+17,ish,she (emphatic),Pronoun
+18,shiu,you (plural/polite),Pronoun
+18,fieau,waiting,Verb
+18,bunnys,almost,Adverb
+18,throng,busy,Adjective
+18,damn,damn,Interjection
+18,dooinney,man,Noun
+18,cadjin,normal,Adjective
+18,shalmane,mushroom,Noun
+18,red,thing,Noun
+18,elley,other,Adjective
+18,blasstal,tasty,Adjective
+18,feill,meat,Noun
+18,corkey,oat(s),Noun
+18,marroo,killing,Verb
+18,dy bragh arragh,ever again,Time
+18,kiart,proper,Adjective
+19,shin,we / us,Pronoun
+19,mayd,we / us (future),Pronoun
+19,çheet,coming,Verb
+19,woieaghyn,boys,Noun
+19,soar,smell,Noun
+19,cur,putting,Verb
+19,mess,fruit,Noun
+19,aynjee,in her / it,Preposition
+19,berrish,berry,Noun
+19,shillish,cherry,Noun
+19,blashtyn,tasting,Verb
+19,ooilley,all,Adjective
+19,elley,another,Adjective
+19,ny-ta,though,Conjunction
+19,ahh wahll,ahh well,Interjection
+19,madyral,mattering,Verb
+19,monney,much,Adverb
+19,roauyree,plump people,Noun
+19,jollyssagh,greedy,Adjective
+19,shapp,shop,Noun
+19,dooint,closed,Adjective
+19,daam,damn,Interjection
+19,shocklaid,chocolate,Noun
+20,ad,they / them,Pronoun
+20,shinyn,we / us (emphatic),Pronoun
+20,shiuish,you (plural emphatic),Pronoun
+20,adsyn,they / them (emphatic),Pronoun
+20,dorraghey,dark,Adjective
+20,cur ass,putting out,Verb
+20,soilshaghyn,lights,Noun
+20,red erbee,anything,Pronoun
+20,noadyr,either,Adverb
+20,follagh,hiding,Verb
+20,voish,from,Preposition
+20,meoiryn shee,police,Noun
+20,paitçhyn,children,Noun
+20,edyr,at all,Adverb
+20,Oie Houney,Hop tu Naa (Halloween),Noun
+20,ooilley,all,Adjective
+20,anjeeal,breakfast,Noun
+20,blebbin,fool,Noun
+20,jollyssagh,greedy,Adjective
