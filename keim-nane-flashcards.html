@@ -438,6 +438,10 @@
                         <input type="checkbox" id="showHints">
                         <span>Show category hints</span>
                     </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="shuffleCards" checked>
+                        <span>Shuffle cards</span>
+                    </label>
                 </div>
             </div>
 
@@ -615,8 +619,13 @@
                 })));
             }
 
-            // Shuffle cards
-            currentCards.sort(() => Math.random() - 0.5);
+            // Shuffle cards if enabled
+            if (document.getElementById('shuffleCards').checked) {
+                for (let i = currentCards.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [currentCards[i], currentCards[j]] = [currentCards[j], currentCards[i]];
+                }
+            }
             currentIndex = 0;
             isFlipped = false;
 
