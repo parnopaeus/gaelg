@@ -12,6 +12,9 @@
             --bright-blue: #2196F3;
             --dark-blue: #1565C0;
             --white: #FFFFFF;
+            --cream: #FAF7F0;
+            --slate: #2C3E50;
+            --gold: #D4AF37;
         }
 
         * {
@@ -22,197 +25,204 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+            background: var(--cream);
             min-height: 100vh;
-            padding: 2rem;
-            color: var(--dark-blue);
+            color: var(--slate);
+            display: flex;
+            flex-direction: column;
         }
 
         header {
+            background: var(--slate);
+            color: var(--cream);
+            padding: 2rem;
             text-align: center;
-            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         h1 {
             font-family: 'Crimson Pro', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--bright-blue);
+            font-size: 2.5rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            color: var(--sky-blue);
-            font-weight: 600;
+            font-size: 1rem;
+            opacity: 0.9;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
         }
 
         .controls {
             background: white;
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             margin-bottom: 2rem;
         }
 
-        .control-group {
+        .control-section {
             margin-bottom: 1.5rem;
         }
 
-        .control-group:last-child {
+        .control-section:last-child {
             margin-bottom: 0;
         }
 
-        label {
-            display: block;
-            font-weight: 600;
+        .control-section h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.2rem;
             margin-bottom: 0.75rem;
-            color: var(--dark-blue);
-            font-size: 1.1rem;
+            color: var(--slate);
         }
 
-        .lesson-selector {
+        /* Collapsible lesson selector */
+        details {
             border: 2px solid var(--sky-blue);
             border-radius: 8px;
-            overflow: hidden;
+            padding: 0.75rem;
+            background: var(--cream);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .lesson-header {
-            background: var(--sky-blue);
-            color: white;
-            padding: 1rem 1.5rem;
-            cursor: pointer;
+        details:hover {
+            border-color: var(--bright-blue);
+        }
+
+        details[open] {
+            background: white;
+        }
+
+        summary {
+            font-weight: 600;
+            color: var(--slate);
+            list-style: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s ease;
+            user-select: none;
         }
 
-        .lesson-header:hover {
-            background: var(--bright-blue);
+        summary::-webkit-details-marker {
+            display: none;
         }
 
-        .lesson-header .arrow {
+        summary::after {
+            content: '▼';
+            font-size: 0.8rem;
+            color: var(--bright-blue);
             transition: transform 0.3s ease;
-            font-size: 1.2rem;
         }
 
-        .lesson-header.expanded .arrow {
-            transform: rotate(180deg);
+        details[open] summary::after {
+            transform: rotate(-180deg);
         }
 
-        .lesson-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            background: white;
-        }
-
-        .lesson-content.expanded {
-            max-height: 600px;
-            padding: 1.5rem;
-            border-top: 2px solid var(--light-blue);
-        }
-
-        .lesson-buttons {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .lesson-buttons button {
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--sky-blue);
-            background: white;
-            color: var(--dark-blue);
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-
-        .lesson-buttons button:hover {
-            background: var(--sky-blue);
-            color: white;
-        }
-
-        .checkbox-list {
+        .lesson-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 0.75rem;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
         }
 
-        .checkbox-item {
+        .lesson-checkbox {
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background 0.2s ease;
         }
 
-        .checkbox-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
+        .lesson-checkbox:hover {
+            background: var(--cream);
+        }
+
+        .lesson-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
             cursor: pointer;
             accent-color: var(--sky-blue);
         }
 
-        .checkbox-item label {
-            margin: 0;
+        .lesson-checkbox label {
             cursor: pointer;
-            font-size: 1rem;
-            font-weight: 400;
+            font-size: 0.95rem;
         }
 
-        .radio-group {
+        .filter-group {
             display: flex;
-            gap: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            border: 2px solid var(--sky-blue);
+            background: white;
+            color: var(--slate);
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--bright-blue);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--bright-blue);
+            color: white;
+            border-color: var(--bright-blue);
+        }
+
+        .mode-section {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
             flex-wrap: wrap;
         }
 
-        .radio-item {
+        select {
+            padding: 0.6rem 1rem;
+            border: 2px solid var(--sky-blue);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        select:hover {
+            border-color: var(--bright-blue);
+        }
+
+        .checkbox-label {
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            cursor: pointer;
         }
 
-        .radio-item input[type="radio"] {
+        .checkbox-label input[type="checkbox"] {
             width: 20px;
             height: 20px;
             cursor: pointer;
             accent-color: var(--sky-blue);
-        }
-
-        .radio-item label {
-            margin: 0;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 400;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            accent-color: var(--sky-blue);
-        }
-
-        .checkbox-group label {
-            margin: 0;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 400;
         }
 
         .start-btn {
@@ -222,6 +232,7 @@
             color: white;
             border: none;
             border-radius: 8px;
+            font-family: 'Crimson Pro', serif;
             font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
@@ -331,13 +342,13 @@
             text-align: center;
             margin-top: 1.5rem;
             font-size: 1.1rem;
-            color: var(--dark-blue);
+            color: var(--slate);
         }
 
         .empty-state {
             text-align: center;
             padding: 4rem 2rem;
-            color: var(--dark-blue);
+            color: var(--slate);
         }
 
         .empty-state h2 {
@@ -347,48 +358,41 @@
             color: var(--bright-blue);
         }
 
-        .attribution {
+        footer {
+            background: var(--slate);
+            color: var(--cream);
             text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 2px solid var(--light-blue);
-            color: var(--dark-blue);
+            padding: 2rem;
+            margin-top: auto;
             font-size: 0.9rem;
         }
 
-        .attribution a {
-            color: var(--bright-blue);
+        footer a {
+            color: var(--gold);
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s ease;
         }
 
-        .attribution a:hover {
-            text-decoration: underline;
+        footer a:hover {
+            color: var(--sky-blue);
         }
 
         @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-
             h1 {
                 font-size: 2rem;
             }
 
             .card-text {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
-            .checkbox-list {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            .lesson-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
             }
 
-            .nav-buttons {
-                flex-direction: column;
-            }
-
-            .nav-btn {
-                width: 100%;
+            .controls {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -400,71 +404,55 @@
     </header>
 
     <div class="container">
-        <div id="controls" class="controls">
-            <div class="control-group">
-                <label>Select Lessoon(yn)</label>
-                <div class="lesson-selector">
-                    <div class="lesson-header" onclick="toggleLessonSelector()">
-                        <span id="lessonSummary">All lessons selected (20)</span>
-                        <span class="arrow">▼</span>
+        <div class="controls" id="controls">
+            <div class="control-section">
+                <h3>Select Lessons</h3>
+                <details>
+                    <summary>
+                        <span id="lessonSummary">Choose lessons (0 selected)</span>
+                    </summary>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;">
+                        <button class="nav-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="selectAllLessons()">Select All</button>
+                        <button class="nav-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;" onclick="deselectAllLessons()">Deselect All</button>
                     </div>
-                    <div class="lesson-content" id="lessonContent">
-                        <div class="lesson-buttons">
-                            <button onclick="selectAllLessons()">Select All</button>
-                            <button onclick="deselectAllLessons()">Deselect All</button>
-                        </div>
-                        <div class="checkbox-list" id="lessonCheckboxes">
-                            <!-- Lesson checkboxes will be added here -->
-                        </div>
-                    </div>
+                    <div class="lesson-grid" id="lessonCheckboxes"></div>
+                </details>
+            </div>
+
+            <div class="control-section">
+                <h3>Filter by Category</h3>
+                <div class="filter-group" id="categoryFilters"></div>
+            </div>
+
+            <div class="control-section">
+                <h3>Study Mode</h3>
+                <div class="mode-section">
+                    <select id="translationMode">
+                        <option value="gaelg-english">Manx → English</option>
+                        <option value="english-gaelg">English → Manx</option>
+                        <option value="both">Both directions</option>
+                    </select>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showHints">
+                        <span>Show category hints</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="shuffleCards" checked>
+                        <span>Shuffle cards</span>
+                    </label>
                 </div>
             </div>
 
-            <div class="control-group">
-                <label>Filter by Category</label>
-                <div class="checkbox-list" id="categoryCheckboxes">
-                    <!-- Category checkboxes will be added here -->
-                </div>
-            </div>
-
-            <div class="control-group">
-                <label>Translation Direction</label>
-                <div class="radio-group">
-                    <div class="radio-item">
-                        <input type="radio" id="manx-to-english" name="direction" value="manx-to-english" checked>
-                        <label for="manx-to-english">Manx → English</label>
-                    </div>
-                    <div class="radio-item">
-                        <input type="radio" id="english-to-manx" name="direction" value="english-to-manx">
-                        <label for="english-to-manx">English → Manx</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="control-group">
-                <div class="checkbox-group">
-                    <input type="checkbox" id="show-hints" checked>
-                    <label for="show-hints">Show category hints on cards</label>
-                </div>
-            </div>
-
-            <div class="control-group">
-                <div class="checkbox-group">
-                    <input type="checkbox" id="shuffle-cards" checked>
-                    <label for="shuffle-cards">Shuffle cards</label>
-                </div>
-            </div>
-
-            <button class="start-btn" onclick="startFlashcards()">Start Practice</button>
+            <button class="start-btn" onclick="startFlashcards()">Start Studying</button>
         </div>
 
         <div id="flashcardArea"></div>
     </div>
 
-    <div class="attribution">
-        <p>Vocabulary from the Loayr Gaelg textbook, available at <a href="https://learnmanx.com" target="_blank">learnmanx.com</a></p>
-        <p>Flashcards created by <a href="https://github.com/parnopaeus" target="_blank">Lauren B. Collister</a></p>
-    </div>
+    <footer>
+        Vocabulary from the Loayr Gaelg textbook, available at <a href="https://learnmanx.com" target="_blank" rel="noopener noreferrer">learnmanx.com</a><br>
+        Flashcards created by <a href="https://github.com/parnopaeus" target="_blank" rel="noopener noreferrer">Lauren B. Collister</a>
+    </footer>
 
     <script>
         let vocabulary = [];
@@ -514,42 +502,51 @@
         }
 
         function populateFilters() {
-            // Populate lesson checkboxes
             const lessons = [...new Set(vocabulary.map(v => v.lesson))].sort((a, b) => a - b);
-            const lessonCheckboxes = document.getElementById('lessonCheckboxes');
-            lessonCheckboxes.innerHTML = '';
+            const categories = [...new Set(vocabulary.map(v => v.category))].sort();
+
+            // Create lesson checkboxes
+            const lessonContainer = document.getElementById('lessonCheckboxes');
+            lessonContainer.innerHTML = '';
             
             lessons.forEach(lesson => {
                 const div = document.createElement('div');
-                div.className = 'checkbox-item';
-                div.innerHTML = `
-                    <input type="checkbox" id="lesson-${lesson}" value="${lesson}" checked onchange="updateLessonSummary()">
-                    <label for="lesson-${lesson}">Lessoon ${lesson}</label>
-                `;
-                lessonCheckboxes.appendChild(div);
+                div.className = 'lesson-checkbox';
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = `lesson-${lesson}`;
+                checkbox.value = lesson;
+                checkbox.checked = true;
+                checkbox.addEventListener('change', updateLessonSummary);
+                
+                const label = document.createElement('label');
+                label.htmlFor = `lesson-${lesson}`;
+                label.textContent = `Lesson ${lesson}`;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                lessonContainer.appendChild(div);
             });
 
-            // Populate category checkboxes
-            const categories = [...new Set(vocabulary.map(v => v.category))].sort();
-            const categoryCheckboxes = document.getElementById('categoryCheckboxes');
-            categoryCheckboxes.innerHTML = '';
+            // Create category filter buttons
+            const categoryContainer = document.getElementById('categoryFilters');
+            categoryContainer.innerHTML = '';
             
-            categories.forEach(category => {
-                const div = document.createElement('div');
-                div.className = 'checkbox-item';
-                div.innerHTML = `
-                    <input type="checkbox" id="cat-${category}" value="${category}" checked>
-                    <label for="cat-${category}">${category}</label>
-                `;
-                categoryCheckboxes.appendChild(div);
-            });
-        }
+            const allBtn = document.createElement('button');
+            allBtn.className = 'filter-btn active';
+            allBtn.textContent = 'All Categories';
+            allBtn.onclick = () => selectCategory(null);
+            categoryContainer.appendChild(allBtn);
 
-        function toggleLessonSelector() {
-            const header = document.querySelector('.lesson-header');
-            const content = document.getElementById('lessonContent');
-            header.classList.toggle('expanded');
-            content.classList.toggle('expanded');
+            categories.forEach(category => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.textContent = category;
+                btn.onclick = () => selectCategory(category);
+                categoryContainer.appendChild(btn);
+            });
+
+            updateLessonSummary();
         }
 
         function updateLessonSummary() {
@@ -574,62 +571,81 @@
             updateLessonSummary();
         }
 
+        let selectedCategory = null;
+
+        function selectCategory(category) {
+            selectedCategory = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', 
+                    (category === null && btn.textContent === 'All Categories') || 
+                    btn.textContent === category
+                );
+            });
+        }
+
         function startFlashcards() {
-            // Get selected lessons
             const selectedLessons = Array.from(document.querySelectorAll('#lessonCheckboxes input:checked'))
-                .map(cb => parseInt(cb.value));
-            
-            // Get selected categories
-            const selectedCategories = Array.from(document.querySelectorAll('#categoryCheckboxes input:checked'))
                 .map(cb => cb.value);
-            
-            // Get direction
-            const direction = document.querySelector('input[name="direction"]:checked').value;
-            
-            // Get show hints preference
-            const showHints = document.getElementById('show-hints').checked;
-            
-            // Filter vocabulary
-            currentCards = vocabulary.filter(v => 
-                selectedLessons.includes(v.lesson) && 
-                selectedCategories.includes(v.category)
-            ).map(v => ({
-                front: direction === 'manx-to-english' ? v.manx : v.english,
-                back: direction === 'manx-to-english' ? v.english : v.manx,
-                category: v.category,
-                showHints: showHints
-            }));
-            
-            if (currentCards.length === 0) {
-                document.getElementById('flashcardArea').innerHTML = `
-                    <div class="empty-state">
-                        <h2>No cards to show</h2>
-                        <p>Try selecting different lessons or categories</p>
-                    </div>
-                `;
+
+            if (selectedLessons.length === 0) {
+                alert('Please select at least one lesson!');
                 return;
             }
+
+            // Filter vocabulary
+            let filtered = vocabulary.filter(v => selectedLessons.includes(String(v.lesson)));
             
+            if (selectedCategory) {
+                filtered = filtered.filter(v => v.category === selectedCategory);
+            }
+
+            if (filtered.length === 0) {
+                alert('No vocabulary found with these filters!');
+                return;
+            }
+
+            // Prepare cards based on translation mode
+            const mode = document.getElementById('translationMode').value;
+            currentCards = [];
+
+            if (mode === 'gaelg-english' || mode === 'both') {
+                currentCards.push(...filtered.map(v => ({
+                    front: v.manx,
+                    back: v.english,
+                    category: v.category
+                })));
+            }
+
+            if (mode === 'english-gaelg' || mode === 'both') {
+                currentCards.push(...filtered.map(v => ({
+                    front: v.english,
+                    back: v.manx,
+                    category: v.category
+                })));
+            }
+
             // Shuffle cards if enabled
-            if (document.getElementById('shuffle-cards').checked) {
+            if (document.getElementById('shuffleCards').checked) {
                 for (let i = currentCards.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1));
                     [currentCards[i], currentCards[j]] = [currentCards[j], currentCards[i]];
                 }
             }
-            
-            // Hide controls and show first card
-            document.getElementById('controls').style.display = 'none';
+
             currentIndex = 0;
+            isFlipped = false;
+
+            // Hide controls, show flashcards
+            document.getElementById('controls').style.display = 'none';
             showCard();
         }
 
         function showCard() {
+            const showHints = document.getElementById('showHints').checked;
             const card = currentCards[currentIndex];
-            const showHints = card.showHints;
             
             document.getElementById('flashcardArea').innerHTML = `
-                <div class="flashcard-container">
+                <div class="flashcard-container active">
                     <div class="flashcard" id="flashcard" onclick="flipCard()">
                         <div class="card-face card-front">
                             <div class="card-text">${card.front}</div>
