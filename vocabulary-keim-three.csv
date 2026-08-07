@@ -1,0 +1,385 @@
+Lesson,Manx,English,Category
+1,er n'akin,has/have seen,Verb
+1,er n'ee,has/have eaten,Verb
+1,er chloie,has/have played,Verb
+1,er vaarey,has/have shaved,Verb
+1,er jeet,has/have come,Verb
+1,er ghooney,has/have closed,Verb
+1,er ghoaill,has/have taken,Verb
+1,er yeeaghyn,has/have watched,Verb
+1,er chionnagh,has/have bought,Verb
+1,er vongey,has/have smiled,Verb
+1,er phaagey,has/have kissed,Verb
+1,er hooyl,has/have walked,Verb
+1,er hroggal,has/have built,Verb
+1,er n'obbragh,has/have worked,Verb
+1,hannah,already / yet,Adverb
+1,foast,still / yet,Adverb
+1,rieau,ever,Adverb
+1,fuill,blood,Noun
+1,gollage,pitch fork,Noun
+1,grunt,ground,Noun
+1,kiaulley,singing,Verb
+1,marroo,dead,Adjective
+1,mayrt,with you,Preposition
+1,red ennagh,something,Phrase
+1,smooinaght,thought / idea,Noun
+1,sourey,summer,Noun
+1,tammylt,a while,Noun
+1,ushag,bird,Noun
+2,deiney,men,Noun
+2,resooney mychione,debating about,Verb
+2,blaa,flower,Noun
+2,mergey,banner,Noun
+2,bennalt,flapping,Verb
+2,gleashagh,moving,Verb
+2,chied,first,Adjective
+2,dy firrinagh,truly,Adverb
+2,nah,second,Adjective
+2,trass,third,Adjective
+2,shaghey,past,Preposition
+2,edyr,either,Conjunction
+2,aigney,mind,Noun
+2,keayrt dy row,once upon a time,Time
+2,tey glass,green tea,Noun
+2,garey,garden,Noun
+2,aalin,beautiful,Adjective
+2,gheay,wind,Noun
+2,mainshter Zen,Zen master,Noun
+2,woieaghyn,gentlemen,Noun
+3,cabbyl beg,a small horse,Noun
+3,foillan beg,a small gull,Noun
+3,roddan beg,a small long-tail,Noun
+3,kiark veg,a small chicken,Noun
+3,muc veg,a small pig,Noun
+3,booa veg,a small cow,Noun
+3,keyrrey veg,a small sheep,Noun
+3,ushag veg,a small bird,Noun
+3,aer,air / sky,Noun
+3,aile,fire,Noun
+3,bannee,bless,Verb
+3,blebbin,fool,Noun
+3,calmane,pigeon,Noun
+3,etlan,’plane,Noun
+3,getlagh,flying,Verb
+3,kiart,right,Adjective
+3,roddan,long tail (euphemism for rat),Noun
+3,sauail,saving,Verb
+4,lhiggey da,letting / allowing,Verb
+4,faggys da,close to / near to,Preposition
+4,cur da,giving to,Verb
+4,gra rish,saying to,Verb
+4,cur,giving / putting,Verb
+4,faggys,near,Adverb
+4,lhiggey,letting / allowing,Verb
+4,pash,pot / kettle / pan,Noun
+5,ro,too,Adverb
+5,dy chooilley,every,Adjective
+5,un,one,Number
+5,daa,two,Number
+5,cha nel agh,only / there is only,Phrase
+5,shapp,shop,Noun
+5,noa,new,Adjective
+5,creck,selling,Verb
+5,soddag phash,pancake,Noun
+5,thie-lhionney,pub,Noun
+5,ram,lots (of),Adjective
+5,goll my-neealloo,fainting,Verb
+5,Injinagh,Indian,Adjective
+5,rour,too much,Adverb
+5,seyr,free,Adjective
+5,smooinaghtyn,thinking,Verb
+5,shilley,sight,Noun
+5,cur shilley er,visiting,Verb
+5,askaid,boil / ulcer,Noun
+5,dooint,closed,Adjective
+5,foshlit,open,Adjective
+5,jeant,finished,Adjective
+5,kenjal,kind,Adjective
+5,ort,what’s up?,Phrase
+5,punt,pound,Noun
+5,sheeanal,sounding,Verb
+5,shelliu,balm / ointment / salve,Noun
+5,soar,smell,Noun
+5,thoin,arse,Noun
+6,geddyn,getting,Verb
+6,clashtyn,hearing,Verb
+6,çheet,coming,Verb
+6,bree,energy / spirit,Noun
+6,croink,hills,Noun
+6,doillee,difficult,Adjective
+6,dowin,deep,Adjective
+6,eaddagh,clothing,Noun
+6,er-shen,then (on-that),Adverb
+6,keoie,mad / wild,Adjective
+6,kiebbey,spade,Noun
+6,lheim,jumping,Verb
+6,loandernee,shining,Verb
+6,magher,field,Noun
+6,pesmad,parsnip,Noun
+6,pishag,spell,Noun
+6,slatt,rod,Noun
+6,sooill,eye,Noun
+6,stroin,nose,Noun
+6,tullogh,moment,Noun
+6,unnish,onion,Noun
+7,jannoo çhing jeh,making sick of,Verb
+7,soaral jeh,smelling of,Verb
+7,briaght jeh,asking of,Verb
+7,doostey jeh,waking of,Verb
+7,aeg,young,Adjective
+7,aigh,luck,Noun
+7,bio,alive,Adjective
+7,breinn,foul,Adjective
+7,briaght,asking,Verb
+7,claare,plate,Noun
+7,er-dy-henney,ago,Adverb
+7,gow kiarail,take care,Phrase
+7,gyllagh,shouting,Verb
+7,maynrey,happy,Adjective
+7,millish,sweet,Adjective
+7,mitçhooragh,mischievous,Adjective
+7,my chooid share,my best,Phrase
+7,shamyr-aarlee,kitchen,Noun
+7,shenn,old,Adjective
+7,trimshagh,sad,Adjective
+7,çheu,side,Noun
+8,bee,be! (imperative),Verb
+8,jean,do! (imperative),Verb
+8,ny bee,don't be!,Verb
+8,ny jean,don't do!,Verb
+9,ennagh,some,Adjective
+9,erbee,any,Adjective
+9,red,thing,Noun
+9,peiagh,person,Noun
+9,boayl,place,Noun
+9,paart (dy),some,Pronoun
+9,treishteil,hoping,Verb
+9,ooilley,all,Adjective
+9,sheese,down,Adverb
+9,coan,valley,Noun
+9,goit,stuck,Adjective
+9,cooney,helping,Verb
+9,imnea,worry,Noun
+9,bouin,waist,Noun
+9,kiangley,tying,Verb
+9,er-e-hoshiaght,forth,Adverb
+9,taghyrt,happening,Verb
+9,tuittym,falling,Verb
+9,voish,from,Preposition
+9,geid,stealing,Verb
+9,brout,brute,Noun
+9,edd,hat,Noun
+9,broogh,bank (of a river),Noun
+9,custey,damned,Adjective
+9,faill,wages,Noun
+9,feddyn,finding,Verb
+9,feme,need,Noun
+9,geeastagh,fishing,Verb
+9,jeean,keen,Adjective
+9,logh,lake,Noun
+9,mygeayrt,around,Adverb
+9,roshtyn,reaching,Verb
+9,shassoo,standing,Verb
+10,my,if,Conjunction
+10,mannagh,if not,Conjunction
+10,myr,if / as,Conjunction
+10,aarloo,ready,Adjective
+10,anmagh,late,Adjective
+10,moghey,early,Adjective
+10,shickyr,sure,Adjective
+11,tappee,fast,Adjective
+11,ny s'tappee,faster,Adjective
+11,ny s'doo,blacker,Adjective
+11,ny s'baney,whiter,Adjective
+11,ny s'çhingey,iller / sicker,Adjective
+11,ny s'corree,angrier,Adjective
+11,ny s'feayrey,colder,Adjective
+11,ny s'fliughey,wetter,Adjective
+11,ny s'maynrey,happier,Adjective
+11,ny s'braew,finer,Adjective
+11,ny s'bwee,yellower,Adjective
+11,geinnagh,sand,Noun
+11,sooillyn,eyes,Noun
+11,sterrym,storm,Noun
+11,yn laa chaie,the other day,Time
+11,tonnyn,waves,Noun
+11,famlagh,seaweed,Noun
+11,noadyr,neither,Conjunction
+11,ollishagh,sweaty,Adjective
+11,lhiantyn (rish),stick (to),Verb
+11,crackan,skin,Noun
+11,gounsternee,barking,Verb
+11,shliee,licking,Verb
+11,lowal (da),allowed (for),Verb
+11,mychione,about,Preposition
+11,keayney,crying,Verb
+11,gonnagh,sore,Adjective
+11,cur lesh,bringing,Verb
+11,mac,son,Noun
+11,blestal,blasting,Verb
+11,bollagh,completely,Adverb
+11,feagh,quiet,Adjective
+11,fo,under,Preposition
+11,gaase,growing,Verb
+11,gerrid,soon,Adverb
+11,kione,head,Noun
+11,lhiattee,side,Noun
+11,lhisagh,should,Verb
+11,mean,middle,Noun
+11,mullagh,top,Noun
+11,ny hoie,sitting,Phrase
+11,ooh,egg,Noun
+11,shnoagyragh,sneaking,Verb
+11,snoggal,nodding,Verb
+11,sonsheragh,whispering,Verb
+11,traa,time,Noun
+11,trooid,through,Preposition
+11,çhelleeragh,at once,Adverb
+12,ny s'accryssagh,hungrier,Adjective
+12,ny s'boiragh,cloudier,Adjective
+12,ny s'dorraghey,darker,Adjective
+12,ny s'deinney,fiercer,Adjective
+12,bluckan,ball,Noun
+12,dooisht,awake,Adjective
+12,farrane,fountain / water source,Noun
+12,gial,bright,Adjective
+12,lhie,going to bed,Verb
+12,litçher,sluggard,Noun
+12,quaagh,strange,Adjective
+12,shein,supposing / speculating,Verb
+13,yn vaatey,the boat,Noun
+13,yn ven,the woman,Noun
+13,yn ghrian,the sun,Noun
+13,yn eayst,the moon,Noun
+13,cass vooar,a big foot,Noun
+13,çheer vooar,a big country,Noun
+13,duillag vooar,a big leaf,Noun
+13,fannag vooar,a big crow,Noun
+13,geay vooar,a big wind,Noun
+13,jough vooar,a big drink,Noun
+13,paag vooar,a big kiss,Noun
+13,queeyl vooar,a big wheel,Noun
+13,sooill vooar,a big eye,Noun
+13,sleayst vooar,a big shovel,Noun
+13,shapp vooar,a big shop,Noun
+13,thunnag vooar,a big duck,Noun
+13,caashagh,cheesy puffs,Noun
+14,olk,bad,Adjective
+14,aashagh,easy,Adjective
+14,smessey,worse / worst,Adjective
+14,sassey,easier,Adjective
+14,share,better,Adjective
+14,s'çhoe,hotter / hottest,Adjective
+14,saa,younger / youngest,Adjective
+14,shinney,older / oldest,Adjective
+14,dy kinjagh,always,Adverb
+14,jaagh,smoke,Noun
+14,torcan,fume,Noun
+14,follym-faase,desolate,Adjective
+14,soaral,smelling,Verb
+14,ard-vee,super-food,Noun
+14,soilshey,light,Noun
+14,greim,bite / morsel,Noun
+14,lhieeney,filling,Adjective
+14,bolg,belly,Noun
+14,ry-gheddyn,available,Adjective
+14,kiarail,intending,Verb
+14,puffyn caashagh,cheesy puffs,Noun
+14,ard-venainshter,head mistress,Noun
+14,ayns firrinys,in truth,Phrase
+14,braag,shoe,Noun
+14,cur seose,give up,Phrase
+14,lossreeyn,vegetables,Noun
+14,sneih,crossness / offence,Noun
+15,er y voayrd,on the table,Phrase
+15,fo'n voayrd,under the table,Phrase
+15,ayns y haggey,in the haggey,Phrase
+15,arragh,spring,Noun
+15,billey,tree,Noun
+15,cheayrtyn,sometimes,Adverb
+15,cheilley,each other,Pronoun
+15,clooie,plumage,Noun
+15,daaney,rude,Adjective
+15,dooys,to ME,Preposition
+15,ersooyl,away,Adverb
+15,foddey,far,Adverb
+15,fouyr,autumn,Noun
+15,geurey,winter,Noun
+15,gob,beak,Noun
+15,meanagh,middle,Adjective
+15,rass,seed,Noun
+15,seihll,world,Noun
+15,shee,peace / sprite (e.g. ben shee),Noun
+15,slieau,mountain,Noun
+15,sperriu,sparrows,Noun
+16,Manninagh,Manx person,Noun
+16,Yernagh,Irish person,Noun
+16,Bretnagh,Welsh person,Noun
+16,Albinagh,Scottish person,Noun
+16,Sostynagh,English person,Noun
+16,aash,a rest,Noun
+16,dorraghey,dark,Adjective
+16,dyn dooyt,without a doubt,Phrase
+16,firrinys,truth,Noun
+16,Frangagh,a French person,Noun
+16,goll roym,setting off,Phrase
+16,ny haaue,retired,Phrase
+16,shiar,east,Noun
+16,shirrey,seeking,Verb
+17,thie y dooinney,the man's house,Phrase
+17,caayr y ven,the woman's car,Phrase
+17,thie yn dooinney,the house of the man,Phrase
+17,anjeeal,breakfast,Noun
+17,blass,taste,Noun
+17,boayrd,table,Noun
+17,bouyr,deaf,Adjective
+17,bun,bottom,Noun
+17,fuinnit,baked,Adjective
+17,greie-clashtyn,hearing-aid,Noun
+17,mwarree,granny,Noun
+17,poanrey,bean,Noun
+17,shaner,grandad,Noun
+17,slatt-obbee,magic wand,Noun
+17,speckleyryn,glasses,Noun
+17,stoyl,seat / stool,Noun
+17,stoyl-drommey,chair,Noun
+18,s'tappee,fastest,Adjective
+18,s'moo,biggest,Adjective
+18,s'jerree,last / latest,Adjective
+18,s'share,best,Adjective
+18,agglagh,scary / scared,Adjective
+18,eddin,face,Noun
+18,liauyr,long,Adjective
+18,mooidjeen,villain,Noun
+18,Ny Moominyn,The Moomins,Noun
+18,shennaghys,history,Noun
+18,soiagh er,attacking,Phrase
+18,dyn vanneryn,exceedingly (lit. 'without manners'),Phrase
+19,thie Pheddyr,Peter's house,Phrase
+19,cabbyl Voirrey,Mary's horse,Phrase
+19,brishey,breaking,Verb
+19,cass,foot,Noun
+19,ennym,name,Noun
+19,foddey,much,Adverb
+19,greasee,cobbler,Noun
+19,inneen,daughter / girl,Noun
+19,jiass,south,Noun
+19,scuirr,stopping,Verb
+19,she nyn mea,you’re welcome (polite / plural),Phrase
+19,straid,street,Noun
+19,thalhear,tailor,Noun
+20,fod,can / to be able,Verb
+20,cha nod,cannot,Verb
+20,nod?,can?,Verb
+20,baanrit,crazy,Adjective
+20,cha s’aym,I don’t know,Phrase
+20,credjal,believing,Verb
+20,dyn,without,Preposition
+20,faasagh,desert,Noun
+20,goardrail,ordering,Verb
+20,gyere,sharp,Adjective
+20,luss,herb,Noun
+20,niau,heaven,Noun
+20,skaal,saucer,Noun
+20,çhiu,thick,Adjective
