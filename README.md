@@ -5,4 +5,4 @@ Materials for Lauren Collister's Manx Language courses.
 
 [Keim Jees Flashcards](https://parnopaeus.github.io/gaelg/keim-jees-flashcards.html)
 
-[Keim Three Flashcards](https://github.com/parnopaeus/gaelg/keim-three-flashcards.html)
+[Keim Three Flashcards](https://parnopaeus.github.io/gaelg/keim-three-flashcards.html)
